@@ -1,8 +1,3 @@
-# 🌾 Dry Spell Prediction Challenge: A Journey to 7th Place
-
-![Rank](https://img.shields.io/badge/Rank-7th_Place-orange?style=for-the-badge) ![F1 Score](https://img.shields.io/badge/F1_Score-0.59-blue?style=for-the-badge) ![Model](https://img.shields.io/badge/Model-XGBoost-green?style=for-the-badge)
-
-> **IndabaX Sudan Dry Spell Prediction Hackathon - 7th Place Solution**
 
 This repository chronicles my complete journey... 
 # 🌾 Dry Spell Prediction Challenge: A Journey to 7th Place
