@@ -3,7 +3,7 @@
 
 ![Rank](https://img.shields.io/badge/Rank-7th_Place-bronze?style=for-the-badge) ![F1 Score](https://img.shields.io/badge/F1_Score-0.59-blue?style=for-the-badge) ![Model](https://img.shields.io/badge/Model-XGBoost-green?style=for-the-badge)
 
-> **7th Place Solution** | *K2/MBZUAI Dry Spell Prediction Hackathon*
+> **7th Place Solution** | *IndabaX Sudan Dry Spell Prediction Hackathon*
 
 This repository documents my journey to crack the code on agricultural drought prediction. Starting with the competition's **Starter Notebook**, I engineered a solution that climbed to **7th Place** by injecting domain-specific physics and creating a dynamic thresholding strategy.
 
