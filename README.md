@@ -44,8 +44,47 @@ My final submission is essentially the **Starter Notebook on Steroids**. I kept 
 ### 1. Feature Engineering: "The Physics Engine"
 Instead of raw sensor data, I fed the model rates of change.
 
-```python
+
 # The "Golden Features" that saved my score
 df['drying_velocity_3d'] = df['5cm_soli_moist'].diff(3) / 3
 df['drying_accel_3d'] = df['drying_velocity_3d'].diff(3)
 df['cumulative_vpd_7d'] = df['vapor_pressure_deficit'].rolling(7).sum()
+2. Strategy: Dynamic Seasonal Thresholds
+I discovered that a global probability threshold (e.g., > 0.5) failed because the risk profile changes by month. I implemented a Sliding Net logic on top of the starter model's predictions:
+
+July (Safe Season): Set threshold to 92nd percentile (Strict). Ignore weak signals.
+
+October (Danger Season): Set threshold to 80th percentile (Loose). Catch every possible sign of drought.
+
+3. Post-Processing (Gap Filling)
+Logic: Used physics constraints to smooth predictions. If Day 1 is Dry and Day 3 is Dry, Day 2 must be Dry (soil doesn't heal overnight).
+
+🔍 What I Missed (The Gap to Rank 1)
+The top winners (F1 ~0.66) bridged the gap that I couldn't cross. In retrospect, here is what separated Rank 7 from Rank 1:
+
+The "Consecutive Days" Feature:
+
+My model looked at "velocity," but it didn't explicitly count "How many days has the soil been stressed?"
+
+This duration feature is likely the strongest predictor of crop failure.
+
+Ensembling:
+
+I bet everything on a single XGBoost.
+
+The winners likely stacked XGBoost + CatBoost + LightGBM. The ensemble "committee" smooths out the edge-case errors that trapped my single model.
+
+Training Data Split:
+
+I trained on all years (2002-2019). The climate in 2002 is different from 2025.
+
+A better strategy would have been weighting recent years (2016-2019) higher to capture modern climate change trends.
+
+📂 Repository Structure
+├── data/               # Raw input files (Train/Test)
+├── starter_notebook_tuned.ipynb  # The main solution file
+└── README.md
+🧠 Final Thoughts
+This competition taught me that Domain Knowledge > Complex Algorithms.
+
+I could have run a GridSearch for days, but realizing that "Soil drying velocity matters more than absolute moisture" is what jumped my score by 20 points. I finished 7th place solo against teams using complex ensembles, proving that a strong physical hypothesis can carry you far.
