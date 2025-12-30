@@ -4,11 +4,12 @@ This repository chronicles my complete journey...
 
 ![Rank](https://img.shields.io/badge/Rank-7th_Place-orange?style=for-the-badge) ![F1 Score](https://img.shields.io/badge/F1_Score-0.59-blue?style=for-the-badge) ![Model](https://img.shields.io/badge/Model-XGBoost-green?style=for-the-badge)
 
-> **IndabaX Sudan Dry Spell Prediction Hackathon - 7th Place Solution**
+> **IndabaX Sudan Dry Spell Prediction Hackathon - 7th Place Solution/68**
 
 This repository chronicles my complete journey through an agricultural drought prediction competition, from initial experiments to the final submission that secured **7th place out of competitive field**. This is a story of iteration, learning from failures, and the power of domain knowledge over pure algorithmic complexity.
 
 ---
+<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/3c492443-9bbc-4e30-855b-c4945003b4b5" />
 
 ## 📋 Table of Contents
 - [The Challenge](#-the-challenge)
@@ -280,20 +281,8 @@ This competition was a masterclass in **model simplicity and domain knowledge**.
 
 ---
 
-## 📫 Contact
-
-Have questions about the approach? Want to discuss drought prediction?
-
-- **Email:** your.email@example.com
-- **LinkedIn:** [Your Profile]
-- **Twitter:** @yourhandle
-
----
-
 ## 📜 License
 
 MIT License - feel free to learn from and build upon this work!
 
 ---
-
-**⭐ If this helped you, please star the repo!**
